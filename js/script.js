@@ -38,7 +38,7 @@ function rollDie(){
 
 function movePlayer(num, spots){
     //increment the players location  by how much i rolled (a.k.a num)
-    players[turn].location += num;
+    players[turn].location += num-1;
     //Once i go around the board set it back to zero and then continue
     players[turn].location = (players[turn].location > maxSpots) ? players[turn].location - maxSpots : players[turn].location + 1;
     //going to use appendChild on the spot given that location to add my player element
